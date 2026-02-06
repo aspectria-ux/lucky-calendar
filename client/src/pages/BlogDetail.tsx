@@ -11,15 +11,15 @@ import { getBlogPostBySlug } from '@/lib/blogLoader';
  * ブログ記事詳細ページ
  */
 export default function BlogDetail() {
-  const params = useParams<{ slug: string }>();
+  const params = useParams<{ id: string }>();
   const [, navigate] = useLocation();
   const [post, setPost] = useState<BlogPost | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const loadPost = async () => {
-      if (params.slug) {
-        const loadedPost = await getBlogPostBySlug(params.slug);
+     if (params.id) {
+  const loadedPost = await getBlogPostBySlug(params.id);
         setPost(loadedPost);
       }
       setLoading(false);
