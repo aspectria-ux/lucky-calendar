@@ -187,8 +187,9 @@ export default function Calendar() {
         {/* ヘッダー */}
         <div className="text-center mb-8">
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-2">
-            開運・吉日＆天体カレンダー
+            Celestial Calendar
           </h1>
+          <p className="text-sm text-gray-500 mb-2">開運・吉日＆天体カレンダー</p>
           <p className="text-lg text-gray-600">2026年〜2027年の吉日と天体イベント</p>
         </div>
 

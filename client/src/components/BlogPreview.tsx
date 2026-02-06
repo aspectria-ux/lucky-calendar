@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 import { useLocation } from 'wouter';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { BookOpen } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { BookOpen, ArrowRight } from 'lucide-react';
 import { BlogPost } from '@/lib/blog';
 import { loadAllBlogPosts } from '@/lib/blogLoader';
 
@@ -28,7 +29,7 @@ export default function BlogPreview() {
       <div className="mt-8 bg-white rounded-lg p-6 border-2 border-gray-200 shadow-lg">
         <div className="flex items-center gap-2 mb-4">
           <BookOpen className="w-5 h-5 text-blue-600" />
-          <h3 className="text-xl font-bold text-gray-800">開運コラム</h3>
+          <h3 className="text-xl font-bold text-gray-800">Journal</h3>
         </div>
         <p className="text-gray-500 text-center py-8">記事を読み込み中...</p>
       </div>
@@ -44,7 +45,7 @@ export default function BlogPreview() {
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2">
           <BookOpen className="w-5 h-5 text-blue-600" />
-          <h3 className="text-xl font-bold text-gray-800">開運コラム</h3>
+          <h3 className="text-xl font-bold text-gray-800">Journal</h3>
         </div>
       </div>
 
@@ -82,6 +83,17 @@ export default function BlogPreview() {
             </div>
           </Card>
         ))}
+      </div>
+
+      {/* 記事をもっと見るボタン */}
+      <div className="mt-6 text-center">
+        <Button
+          onClick={() => navigate('/blog')}
+          className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition-colors flex items-center gap-2 mx-auto"
+        >
+          記事をもっと見る
+          <ArrowRight className="w-4 h-4" />
+        </Button>
       </div>
     </div>
   );
