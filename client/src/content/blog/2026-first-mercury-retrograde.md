@@ -1,6 +1,7 @@
 ---
 title: 2026年最初の水星逆行！注意したいポイントは？
 date: 2026-02-20
+slug: "2026-first-mercury-retrograde"
 tags: [水星逆行, 天体イベント, コミュニケーション]
 description: 2026年最初の水星逆行は魚座で発生。特に気をつけたいポイントを解説します。
 image: https://placehold.jp/400x250.png
