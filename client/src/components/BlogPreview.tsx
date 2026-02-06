@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useLocation } from 'wouter';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { BookOpen } from 'lucide-react';
@@ -10,6 +11,7 @@ import { loadAllBlogPosts } from '@/lib/blogLoader';
  * 最新の記事を3件表示
  */
 export default function BlogPreview() {
+  const [, navigate] = useLocation();
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -51,14 +53,15 @@ export default function BlogPreview() {
           <Card
             key={post.id}
             className="p-4 border border-gray-200 hover:shadow-md transition-shadow cursor-pointer group"
+            onClick={() => navigate(`/blog/${post.slug}`)}
           >
             <img
-              src={post.image}
+              src="https://placehold.jp/400x250.png"
               alt={post.title}
               className="w-full h-32 object-cover rounded-t-lg mb-2"
               onError={(e) => {
                 e.currentTarget.src = 
-                  "https://via.placeholder.com/300x150?text=No+Image";
+                  "https://placehold.jp/400x250.png";
               }}
             />
             <div className="space-y-2">

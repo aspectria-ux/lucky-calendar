@@ -3,7 +3,7 @@ title: 2026年最強開運日ガイド
 date: 2026-01-01
 tags: [開運, 吉日]
 description: 2026年で特に運気が重なる日を3つピックアップして解説します。
-image: https://files.manuscdn.com/user_upload_by_module/session_file/310519663335723845/XVhvGtFvIDzBygqi.jpg
+image: https://placehold.jp/400x250.png
 ---
 
 2026年は、新たな始まりと大きなチャンスに満ちた年となるでしょう。特に、複数の吉日が重なる「最強開運日」は、あなたの願いを叶えるための強力な後押しをしてくれます。このガイドでは、2026年の中でも特に注目すべき3つの最強開運日をピックアップし、その意味と過ごし方について詳しく解説します。
