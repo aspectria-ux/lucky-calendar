@@ -1,6 +1,7 @@
 ---
 title: 変わりゆく時代の象徴？海王星と土星が完全に重なる激レア天体イベント
 date: 2026-02-18
+slug: "neptune-saturn-conjunction"
 tags: [天体イベント, 占星術, 社会変化]
 description: 2026年2月21日、海王星と土星が1989年以来初めて完全に重なり合います。社会や個人への影響を解説。
 image: https://placehold.jp/400x250.png
