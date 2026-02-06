@@ -1,6 +1,7 @@
 ---
-title: 2026年“蝕（食）のシーズン”到来
+title: 2026年早くも“蝕（食）のシーズン”到来
 date: 2026-02-25
+slug: "2026-eclipse-season"
 tags: [天体イベント, 月, 占星術]
 description: 2026年2月17日の金環日食と3月3日の皆既月食が生活に与える影響とおすすめの過ごし方を解説。
 image: https://placehold.jp/400x250.png
