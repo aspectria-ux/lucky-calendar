@@ -7,7 +7,7 @@ import { createBlogPost, BlogPost } from './blog';
 
 // Viteのglob importで全ブログ記事を読み込む
 const blogModules = import.meta.glob<string>(
-  '/client/src/content/blog/*.md',
+  '../content/blog/*.md',
   { query: '?raw', import: 'default' }
 );
 
