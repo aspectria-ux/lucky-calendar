@@ -12,6 +12,7 @@ export interface BlogPost {
   tags: string[];
   content: string;
   slug: string;
+  image?: string; // 画像URLを追加
 }
 
 export interface BlogMetadata {
@@ -20,6 +21,7 @@ export interface BlogMetadata {
   date: string;
   author: string;
   tags: string[];
+  image?: string; // 画像URLを追加
 }
 
 /**
@@ -74,10 +76,13 @@ function parseFrontmatterContent(content: string): BlogMetadata {
       case 'author':
         metadata.author = value;
         break;
-      case 'tags':
+case 'tags':
         // タグの解析: [tag1, tag2] または tag1, tag2
-        const tagsStr = value.replace(/^\[|\]$/g, '');
+        const tagsStr = value.replace(/^[|]$/g, '');
         metadata.tags = tagsStr.split(',').map((tag) => tag.trim());
+        break;
+      case 'image':
+        metadata.image = value;
         break;
     }
   }
@@ -88,6 +93,7 @@ function parseFrontmatterContent(content: string): BlogMetadata {
     date: metadata.date || new Date().toISOString().split('T')[0],
     author: metadata.author || 'Anonymous',
     tags: metadata.tags || [],
+    image: metadata.image || '/placeholder-image.png', // デフォルトのプレースホルダー画像を設定
   };
 }
 
@@ -121,6 +127,7 @@ export function createBlogPost(
     tags: metadata.tags,
     content: body,
     slug,
+    image: metadata.image,
   };
 }
 

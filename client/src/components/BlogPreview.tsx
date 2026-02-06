@@ -52,6 +52,15 @@ export default function BlogPreview() {
             key={post.id}
             className="p-4 border border-gray-200 hover:shadow-md transition-shadow cursor-pointer group"
           >
+            <img
+              src={post.image}
+              alt={post.title}
+              className="w-full h-32 object-cover rounded-t-lg mb-2"
+              onError={(e) => {
+                e.currentTarget.src = 
+                  "https://via.placeholder.com/300x150?text=No+Image";
+              }}
+            />
             <div className="space-y-2">
               <h4 className="font-semibold text-gray-800 group-hover:text-blue-600 transition-colors line-clamp-2">
                 {post.title}
