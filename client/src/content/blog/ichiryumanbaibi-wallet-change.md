@@ -1,6 +1,7 @@
 ---
 title: 一粒万倍日に財布を買い換えるべき理由
 date: 2026-01-15
+slug: "ichiryumanbaibi-wallet-change"
 tags: [金運, 一粒万倍日, 財布]
 description: 一粒万倍日の意味と、アフィリエイトに繋がるような財布の選び方アドバイス。
 image: https://placehold.jp/400x250.png
