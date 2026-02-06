@@ -76,37 +76,43 @@ export default function BlogList() {
       ) : (
         <div className="space-y-4">
           {filteredPosts.map((post) => (
-            <Card key={post.id} className="p-6 border-2 border-gray-200 hover:shadow-lg transition-shadow">
-              <div className="space-y-3">
-                {/* タイトル */}
-                <h3 className="text-xl font-bold text-gray-800">{post.title}</h3>
+           <a href={`/blog/${post.id}`} key={post.id} className="block">
+  <Card className="p-6 border-2 border-gray-200 hover:shadow-lg transition-shadow cursor-pointer">
+    <div className="space-y-3">
+      {/* タイトル */}
+      <h3 className="text-xl font-bold text-gray-800">{post.title}</h3>
+      
+      {/* メタ情報 */}
+      <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600">
+        <span>{post.date.toLocaleDateString('ja-JP')}</span>
+        <span>著者: {post.author}</span>
+      </div>
 
-                {/* メタ情報 */}
-                <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600">
-                  <span>{post.date.toLocaleDateString('ja-JP')}</span>
-                  <span>著者: {post.author}</span>
-                </div>
+      {/* 説明 */}
+      <p className="text-gray-700">{post.description}</p>
 
-                {/* 説明 */}
-                <p className="text-gray-700">{post.description}</p>
-
-                {/* タグ */}
-                {post.tags.length > 0 && (
-                  <div className="flex flex-wrap gap-2 pt-2">
-                    {post.tags.map((tag) => (
-                      <Badge
-                        key={tag}
-                        variant="secondary"
-                        className="cursor-pointer hover:bg-gray-300"
-                        onClick={() => setSelectedTag(tag)}
-                      >
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
-                )}
-              </div>
-            </Card>
+      {/* タグ (クリックしても親のaタグに反応しないようe.stopPropagationを入れると親切です) */}
+      {post.tags.length > 0 && (
+        <div className="flex flex-wrap gap-2 pt-2">
+          {post.tags.map((tag) => (
+            <Badge
+              key={tag}
+              variant="secondary"
+              className="cursor-pointer hover:bg-gray-300"
+              onClick={(e) => {
+                e.preventDefault(); // 親のリンクを無効化
+                e.stopPropagation(); // 親へのイベント伝播を阻止
+                setSelectedTag(tag);
+              }}
+            >
+              {tag}
+            </Badge>
+          ))}
+        </div>
+      )}
+    </div>
+  </Card>
+</a>
           ))}
         </div>
       )}
