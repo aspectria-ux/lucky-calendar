@@ -1,6 +1,7 @@
 ---
 title: 2026年最強開運日ガイド
 date: 2026-01-01
+slug: "2026-saikyo-kaiunbi-guide"
 tags: [開運, 吉日]
 description: 2026年で特に運気が重なる日を3つピックアップして解説します。
 image: https://placehold.jp/400x250.png
