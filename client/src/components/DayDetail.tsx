@@ -7,6 +7,7 @@ import {
   getRetrogradeEventsForDate,
 } from '@/data/calendarData';
 import { luckyDayMeanings, rokuyoMeanings, celestialEventMeanings, retrogradeEventMeanings } from '@/data/meanings';
+import AffiliateArea from './AffiliateArea';
 
 interface DayDetailProps {
   date: Date;
@@ -30,12 +31,15 @@ export default function DayDetail({ date }: DayDetailProps) {
 
   const isFushojuju = luckyDays.includes('fushojuju');
 
+  // アフィリエイト表示用の主要な吉日タイプを取得
+  const primaryLuckyDay = luckyDays.find(ld => ld !== 'fushojuju') || undefined;
+
   return (
-    <Card className="p-6 shadow-lg border-2 border-gray-200 h-full">
+    <Card className="p-6 shadow-lg border-2 border-gray-200 h-full overflow-y-auto">
       <div className="space-y-4">
         {/* 日付 */}
         <div>
-          <h3 className="text-2xl font-bold text-gray-800">{dateStr}</h3>
+          <h3 className="text-xl sm:text-2xl font-bold text-gray-800">{dateStr}</h3>
         </div>
 
         {/* 六曜 */}
@@ -59,7 +63,7 @@ export default function DayDetail({ date }: DayDetailProps) {
                 const meaning = luckyDayMeanings[luckyDay];
                 const isNegative = luckyDay === 'fushojuju';
                 return (
-                  <div key={luckyDay} className="p-2 rounded-lg bg-gray-50 border border-gray-200">
+                  <div key={luckyDay} className={`p-2 rounded-lg border ${isNegative ? 'bg-red-50 border-red-200' : 'bg-gray-50 border-gray-200'}`}>
                     <p className={`font-semibold text-sm ${isNegative ? 'text-red-600' : 'text-gray-800'}`}>
                       {meaning?.name}
                     </p>
@@ -115,6 +119,9 @@ export default function DayDetail({ date }: DayDetailProps) {
             <p className="text-sm text-gray-600">この日に特別な吉日や天体イベントはありません</p>
           </div>
         )}
+
+        {/* アフィリエイトエリア */}
+        <AffiliateArea luckyDayType={primaryLuckyDay} />
       </div>
     </Card>
   );

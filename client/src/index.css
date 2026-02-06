@@ -44,40 +44,40 @@
 
 :root {
   /* クラウドドリーム・デザイン方針 */
-  /* パステルグラデーション: ピンク→ラベンダー→ライトブルー */
-  --primary: oklch(0.72 0.15 340); /* ピンク */
+  /* パステルグラデーション: ピンク→ラベンダー→ライトブルー（ライトブルー増量版） */
+  --primary: oklch(0.72 0.12 250); /* ライトブルー寄りに調整 */
   --primary-foreground: oklch(1 0 0); /* 白 */
-  --sidebar-primary: oklch(0.68 0.12 340); /* 濃いピンク */
+  --sidebar-primary: oklch(0.68 0.10 260); /* ブルー系 */
   --sidebar-primary-foreground: oklch(1 0 0);
-  --chart-1: oklch(0.8 0.12 340); /* ライトピンク */
-  --chart-2: oklch(0.75 0.14 340); /* ピンク */
-  --chart-3: oklch(0.7 0.15 280); /* ラベンダー */
-  --chart-4: oklch(0.65 0.12 260); /* ライトブルー */
-  --chart-5: oklch(0.6 0.1 250); /* ブルー */
+  --chart-1: oklch(0.85 0.08 250); /* ライトブルー */
+  --chart-2: oklch(0.8 0.10 260); /* ブルー */
+  --chart-3: oklch(0.75 0.12 280); /* ラベンダー */
+  --chart-4: oklch(0.7 0.10 300); /* ライトパープル */
+  --chart-5: oklch(0.75 0.08 330); /* ライトピンク */
   --radius: 0.75rem; /* 柔らかな角丸 */
-  --background: oklch(0.98 0.002 340); /* ほぼ白のピンク系 */
+  --background: oklch(0.98 0.005 250); /* ほぼ白のブルー系 */
   --foreground: oklch(0.15 0.01 0); /* 濃いグレー/ほぼ黒 */
   --card: oklch(1 0 0); /* 白 */
   --card-foreground: oklch(0.15 0.01 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.15 0.01 0);
-  --secondary: oklch(0.85 0.08 280); /* ラベンダー */
+  --secondary: oklch(0.88 0.06 260); /* ライトブルー */
   --secondary-foreground: oklch(0.15 0.01 0);
-  --muted: oklch(0.92 0.04 340); /* ライトピンク */
-  --muted-foreground: oklch(0.4 0.05 340);
-  --accent: oklch(0.75 0.12 260); /* ライトブルー */
+  --muted: oklch(0.94 0.03 250); /* ライトブルー */
+  --muted-foreground: oklch(0.4 0.05 260);
+  --accent: oklch(0.78 0.10 260); /* ブルー */
   --accent-foreground: oklch(0.15 0.01 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.95 0.03 340); /* 薄いピンク */
-  --input: oklch(0.95 0.03 340);
-  --ring: oklch(0.7 0.15 340); /* ピンク */
-  --sidebar: oklch(0.98 0.002 340);
+  --border: oklch(0.95 0.02 250); /* 薄いブルー */
+  --input: oklch(0.95 0.02 250);
+  --ring: oklch(0.7 0.12 260); /* ブルー */
+  --sidebar: oklch(0.98 0.005 250);
   --sidebar-foreground: oklch(0.15 0.01 0);
-  --sidebar-accent: oklch(0.85 0.08 280);
+  --sidebar-accent: oklch(0.88 0.06 260);
   --sidebar-accent-foreground: oklch(0.15 0.01 0);
-  --sidebar-border: oklch(0.95 0.03 340);
-  --sidebar-ring: oklch(0.7 0.15 340);
+  --sidebar-border: oklch(0.95 0.02 250);
+  --sidebar-ring: oklch(0.7 0.12 260);
 }
 
 .dark {
