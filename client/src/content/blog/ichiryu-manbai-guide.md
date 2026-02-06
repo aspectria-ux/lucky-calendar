@@ -1,8 +1,8 @@
 ---
 title: 一粒万倍日の活用ガイド
 description: 2026年の一粒万倍日を活用して、金運と事業運を高める方法
+slug: "ichiryu-manbai-guide"
 date: 2026-01-15
-author: 開運カレンダー編集部
 tags: [lucky-ichiryu-manbai, money, business]
 ---
 
