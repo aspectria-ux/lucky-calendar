@@ -11,6 +11,7 @@ import {
 import { luckyDayMeanings, rokuyoMeanings, celestialEventMeanings, retrogradeEventMeanings } from '@/data/meanings';
 import CalendarDay from './CalendarDay';
 import DayDetail from './DayDetail';
+import RetrogradeBars from './RetrogradeBars';
 
 /**
  * 2026年のカレンダーコンポーネント
@@ -159,6 +160,9 @@ export default function Calendar() {
                   </div>
                 ))}
               </div>
+
+              {/* 逆行期間の帯表示 */}
+              <RetrogradeBars month={month} year={year} />
             </Card>
           </div>
 
