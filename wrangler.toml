@@ -1,0 +1,20 @@
+name = "kaiun-calendar-2026"
+type = "javascript"
+account_id = ""
+workers_dev = true
+route = ""
+zone_id = ""
+
+[env.production]
+name = "kaiun-calendar-2026-prod"
+routes = [
+  { pattern = "example.com", zone_name = "example.com" }
+]
+
+[build]
+command = "pnpm install && pnpm build"
+cwd = "./"
+watch_paths = ["client/src/**/*.{ts,tsx,css}"]
+
+[build.upload]
+format = "service-worker"
