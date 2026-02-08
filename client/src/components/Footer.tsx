@@ -12,7 +12,7 @@ export default function Footer() {
           {/* コピーライト */}
           <div className="text-center md:text-left">
             <p className="text-sm text-gray-600">
-              © {currentYear} Aspectria All rights reserved.
+              © 2026 Aspectria All rights reserved.
             </p>
           </div>
 

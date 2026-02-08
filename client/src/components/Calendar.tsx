@@ -67,7 +67,7 @@ export default function Calendar() {
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50 py-8 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-pink-50 via-purple-100 via-40% to-blue-100 py-8 px-4">
       {/* 背景装飾: 雲のような半透明パターン */}
       <div className="fixed inset-0 pointer-events-none opacity-30">
         <svg className="w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
@@ -79,17 +79,17 @@ export default function Calendar() {
           {/* 雲のような曲線パターン */}
           <path
             d="M 0 200 Q 300 100 600 200 T 1200 200 L 1200 0 L 0 0 Z"
-            fill="rgba(255, 182, 217, 0.2)"
+            fill="rgba(255, 182, 217, 0.15)"
             filter="url(#blur)"
           />
           <path
             d="M 0 400 Q 300 300 600 400 T 1200 400 L 1200 300 L 0 300 Z"
-            fill="rgba(212, 181, 255, 0.15)"
+            fill="rgba(212, 181, 255, 0.12)"
             filter="url(#blur)"
           />
           <path
             d="M 0 600 Q 300 500 600 600 T 1200 600 L 1200 500 L 0 500 Z"
-            fill="rgba(168, 216, 255, 0.2)"
+            fill="rgba(168, 216, 255, 0.3)"
             filter="url(#blur)"
           />
         </svg>
@@ -99,8 +99,9 @@ export default function Calendar() {
         {/* ヘッダー */}
         <div className="text-center mb-8">
           <h1 className="text-5xl font-bold text-gray-800 mb-2">
-            開運・吉日＆天体カレンダー
+            Celestial Calendar
           </h1>
+          <p className="text-sm text-gray-600 mb-2">開運・吉日＆天体カレンダー</p>
           <p className="text-lg text-gray-600">2026年の吉日と天体イベント</p>
         </div>
 
