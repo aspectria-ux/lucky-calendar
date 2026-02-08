@@ -24,7 +24,7 @@ export default function RetrogradeBars({ month, year }: { month: number; year: n
   // 逆行の色定義
   const getRetrogradColor = (planet: string) => {
     return planet === 'mercury' 
-      ? 'bg-gradient-to-r from-orange-300 to-orange-400' 
+      ? 'bg-gradient-to-r from-blue-300 to-cyan-400' 
       : 'bg-gradient-to-r from-amber-300 to-amber-400';
   };
 
@@ -104,7 +104,7 @@ export default function RetrogradeBars({ month, year }: { month: number; year: n
         <p className="text-xs font-semibold text-gray-600">凡例</p>
         <div className="flex gap-4 text-xs">
           <div className="flex items-center gap-2">
-            <div className="w-4 h-4 bg-gradient-to-r from-orange-300 to-orange-400 rounded" />
+            <div className="w-4 h-4 bg-gradient-to-r from-blue-300 to-cyan-400 rounded" />
             <span className="text-gray-600">水星逆行</span>
           </div>
           <div className="flex items-center gap-2">
