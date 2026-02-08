@@ -1,7 +1,10 @@
 import { useState, useEffect } from 'react';
 import { useLocation } from 'wouter';
+import { Button } from '@/components/ui/button';
+import { Home } from 'lucide-react';
 import BlogList from '@/components/BlogList';
 import BlogPostDetail from '@/components/BlogPostDetail';
+import Footer from '@/components/Footer';
 
 /**
  * ブログページ: ブログ一覧と詳細を管理
@@ -29,8 +32,12 @@ export default function Blog() {
     navigate('/blog');
   };
 
+  const handleBackToHome = () => {
+    navigate('/');
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50 py-8 px-4">
+    <div className="min-h-screen flex flex-col bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50">
       {/* 背景装飾: 雲のような半透明パターン */}
       <div className="fixed inset-0 pointer-events-none opacity-30">
         <svg className="w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
@@ -57,24 +64,46 @@ export default function Blog() {
         </svg>
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto">
-        {/* ヘッダー */}
-        {!selectedSlug && (
-          <div className="text-center mb-8">
-            <h1 className="text-5xl font-bold text-gray-800 mb-2">
-              Journal
-            </h1>
-            <p className="text-lg text-gray-600">流れに流らされず、流れにのって軽やかに進む</p>
-          </div>
-        )}
-
-        {/* コンテンツ */}
-        {selectedSlug ? (
-          <BlogPostDetail slug={selectedSlug} onBack={handleBackToList} />
-        ) : (
-          <BlogList onSelectPost={handleSelectPost} />
-        )}
+      {/* ナビゲーションバー */}
+      <div className="relative z-20 border-b border-gray-200 bg-white/80 backdrop-blur-sm">
+        <div className="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
+          <h1 className="text-2xl font-bold text-gray-800">Celestial Calendar</h1>
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={handleBackToHome}
+            className="border-gray-300 hover:bg-pink-100"
+          >
+            <Home className="w-4 h-4 mr-2" />
+            トップページに戻る
+          </Button>
+        </div>
       </div>
+
+      {/* メインコンテンツ */}
+      <div className="relative z-10 flex-1 py-8 px-4">
+        <div className="max-w-4xl mx-auto">
+          {/* ヘッダー */}
+          {!selectedSlug && (
+            <div className="text-center mb-8">
+              <h1 className="text-5xl font-bold text-gray-800 mb-2">
+                Journal
+              </h1>
+              <p className="text-lg text-gray-600">流れに流らされず、流れにのって軽やかに進む</p>
+            </div>
+          )}
+
+          {/* コンテンツ */}
+          {selectedSlug ? (
+            <BlogPostDetail slug={selectedSlug} onBack={handleBackToList} />
+          ) : (
+            <BlogList onSelectPost={handleSelectPost} />
+          )}
+        </div>
+      </div>
+
+      {/* フッター */}
+      <Footer />
     </div>
   );
 }
