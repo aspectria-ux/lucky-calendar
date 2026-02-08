@@ -62,9 +62,9 @@ export default function Blog() {
         {!selectedSlug && (
           <div className="text-center mb-8">
             <h1 className="text-5xl font-bold text-gray-800 mb-2">
-              開運ブログ
+              Journal
             </h1>
-            <p className="text-lg text-gray-600">吉日と天体イベントの活用法</p>
+            <p className="text-lg text-gray-600">流れに流らされず、流れにのって軽やかに進む</p>
           </div>
         )}
 
